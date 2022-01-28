@@ -24,7 +24,6 @@ function onFormSubmitBtn(event) {
     // або такий варіант - console.log('Фінальні дані: ', formData);
     event.currentTarget.reset();
     localStorage.removeItem(LOCALSTORAGE_KEY);
-    console.log('Фінальні дані (formData): ', formData);
 }
 
 function checkFormFields() {
