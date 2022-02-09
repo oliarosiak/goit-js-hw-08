@@ -12,13 +12,15 @@ const playerTimeUpdate = function (data) {
 player.on('timeupdate', throttle(playerTimeUpdate, 1000));
 
 const videoStopTime = localStorage.getItem("videoplayer-current-time");
-player.setCurrentTime(videoStopTime);
+// player.setCurrentTime(videoStopTime);
 
 
 
 //В документації приклад такий був:
-// player.setCurrentTime(videoStopTime).then(function(seconds) {
-//     console.log(seconds);    
-// }).catch(function (error) {
-//     console.log(error.name);
-// });
+player.setCurrentTime(videoStopTime).then(function(seconds) {
+    console.log(seconds);    
+}).catch(function (error) {
+    console.log(error.name);
+});
+
+
